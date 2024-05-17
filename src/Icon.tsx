@@ -1,6 +1,3 @@
-import { Suspense, lazy } from "react";
-import DefaultIcon from "./assets/question-line.svg";
-
 interface ImageProps {
   url: string;
   size: number;
