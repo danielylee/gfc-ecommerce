@@ -49,7 +49,7 @@ function Navbar() {
         </div>
         {isOpen && (
           <div className="h-screen bg-white">
-            <NavbarLinks direction="col" />
+            <NavbarLinks direction="stacked" />
           </div>
         )}
       </div>
