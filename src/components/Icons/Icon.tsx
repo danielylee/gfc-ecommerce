@@ -1,5 +1,7 @@
+import { CloseIcon, MenuIcon, ShoppingBagIcon } from ".";
+
 interface ImageProps {
-  url: string;
+  name: string;
   size: number;
   fill: string;
   stroke: string;
@@ -7,16 +9,23 @@ interface ImageProps {
 }
 
 function Icon({
-  url,
+  name,
   size = 24,
   color = "currentColor",
   fill = "none",
   stroke = "none",
 }: ImageProps) {
+  const iconMap: Record<string, string> = {
+    close: CloseIcon,
+    menu: MenuIcon,
+    shoppingBag: ShoppingBagIcon,
+  };
+  const iconUrl = iconMap[name] || "";
+
   return (
     <img
-      src={url}
-      alt={url.replace("/src/assets/", "").split(".").slice(0, -1).join(".")}
+      src={iconUrl}
+      alt={name}
       style={{
         width: size,
         height: size,
