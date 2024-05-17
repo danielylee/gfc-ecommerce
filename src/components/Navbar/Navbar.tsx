@@ -30,7 +30,7 @@ function Navbar() {
     <>
       <div className={`${isOpen ? "w-[95%]" : "w-full"}`}>
         <div
-          className={`flex items-center justify-between gap-8 ${isOpen ? "bg-white" : ""} p-4 pt-2`}
+          className={`flex items-center justify-between gap-8 ${isOpen ? "bg-white" : ""} ${isMobile ? "p-6" : "p-4"}`}
         >
           <div className="flex items-center justify-between">
             <div>
